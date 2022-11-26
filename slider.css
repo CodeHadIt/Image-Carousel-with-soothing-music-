@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fec7d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2.5s;
+}
+
+.slide img {
+    width: 800px;
+    height: 500px;
+}
+
+
+.auto-text {
+    color: rgb(255, 91, 118);
+    position: fixed;
+    top: 4%;
+}
+
+.start{
+    left: 45%;
+    margin-left: 10%;
+}
+
+.stop{
+    left: 39%;
+    margin-right: 10%;
+}
+
+
+#switch {
+    width: 60px;
+    height: 34px;
+    border: 1px solid white;
+    position: fixed;
+    left: 49%;
+    top: 4%;
+    border-radius: 34px;
+}
+
+#switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: pink;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    
+}
+
+#toggle:before {
+    position: absolute;
+    content: "";
+    height: 27px;
+    width: 27px;
+    top:2px;
+    left: 2px;
+    background-color: white;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+input:checked + #toggle {
+    background-color: rgb(255, 91, 118);
+}
+
+input:checked + #toggle:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* .icon-div {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    z-index: 0;
+} */
+
+#music-icon  {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+}
+
+audio {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 100px;
+    /* z-index: 1; */
+}
+
+
+
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.manual-btn {
+    border: 2px solid #fec7d7;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background: #fec7d7;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+#radio5:checked ~ .first{
+    margin-left: -80%;
+}
+#radio6:checked ~ .first{
+    margin-left: -100%;
+}
+#radio7:checked ~ .first{
+    margin-left: -120%;
+}
+#radio8:checked ~ .first{
+    margin-left: -140%;
+}
+#radio9:checked ~ .first{
+    margin-left: -160%;
+}
+
+.navigation-auto {
+    position:absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    margin-top: 460px;
+
+}
+
+.navigation-auto div {
+    border: 2px solid #fec7d7;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #fec7d7;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #fec7d7;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #fec7d7;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #fec7d7;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background: #fec7d7;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+    background: #fec7d7;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+    background: #fec7d7;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+    background: #fec7d7;
+}
+
+#radio9:checked ~ .navigation-auto .auto-btn9 {
+    background: #fec7d7;
+}
+
+@media (max-width: 960px){
+    .slider{
+        max-width: 550px;
+    }
+
+    .start {
+        left: 55%;
+        margin-left: 10%;
+    }
+
+    .stop {
+        left: 25%;
+        margin-right: 10%;
+    }
+
+    .navigation-manual, .navigation-auto {
+        width: 550px
+    }
+    
+}
+
+@media (min-width: 960px) and (max-width: 1250px){
+    .start {
+        left: 50%;
+        margin-left: 10%;
+        }
+
+    .stop {
+    left: 30%;
+    margin-right: 10%;
+    }
+}
+

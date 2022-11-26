@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="./slider.css">
+</head>
+<body>
+    <h2 class="auto-text stop">Stop Slide</h2>
+    <label id="switch">
+        <input type="checkbox" id="checkbox">
+        <span id="toggle"></span>
+    </label>
+    <h2 class="auto-text start">Start Slide</h2>
+
+    
+    <i class="fa-regular fa-circle-play" id="music-icon"></i>
+    <audio loop id="audio">
+        <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/ogg">
+    </audio>
+
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <input type="radio" name="radio-btn" id="radio6">
+            <input type="radio" name="radio-btn" id="radio7">
+            <input type="radio" name="radio-btn" id="radio8">
+            <input type="radio" name="radio-btn" id="radio9">
+            
+            <div class="slide first">
+                <img src="Night Horizontal/156c8c8625ffff19b2a8d4c65dad23afaa0eddf51ba672571a7175fba2bf8d9c.jpg" alt="nightImage1">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/3.jpg" alt="nightImage2">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/7.jpg" alt="nightImage3">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/81291fdfae7955c9842c824ebe5f3692b840b6bfdc6338f29e3052cd8b1275bb.jpg" alt="nightImage4">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/8d7b58cce8671b45cd30be2544fe8d378a524c6229b40044264736a158e4ac68.jpg" alt="nightImage5">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/9b9ae8f58805ae7fcfe79ffc6a6f22d520403d9969169697fdb9d06d5c085fa9.jpg" alt="nightImage6">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/d3eedb83164482c35b9bf5057a67514a6d30ccc1c43cadacc08c0526ac994779.jpg" alt="nightImage7">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/october-end (2).jpg" alt="nightImage8">
+            </div>
+            <div class="slide">
+                <img src="Night Horizontal/october-end (4).jpg" alt="nightImage9">
+            </div>
+
+            
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+                <div class="auto-btn5"></div>
+                <div class="auto-btn6"></div>
+                <div class="auto-btn7"></div>
+                <div class="auto-btn8"></div>
+                <div class="auto-btn9"></div>
+            </div>
+
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+                <label for="radio9" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+    <script src="./slider.js"></script>
+</body>
+</html>
